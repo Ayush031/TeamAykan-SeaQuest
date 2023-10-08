@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O2 Simulator</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/webPage4.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#Contact">About</a></li>
+                <li><a href="#Contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="page-header">
+        <div class="body-heading">O2 Production through PhotoSynthesis</div>
+        <div class="simulationBtn">
+            <a class="explorebtn" onclick="showSimA('pageA')">Start Simulation A</a>
+            <a class="explorebtn" onclick="showSimB('pageB')">Start Simulation B</a>
+        </div>
+    </div>
+
+    <div class="page1 page" id="pageA">
+        <div class="scene" id="sceneForest">
+        </div>
+        <div id="arrowAnim">
+            <img src="/img/svg/co2.png">
+            <img src="/img/svg/co2.png">
+        </div>
+        <div class="scene" id="sceneCity">
+            <img src="/img/svg/car1.svg" class="animationO2 avatar" id="car1">
+            <img src="/img/svg/car2.svg" class="animationO2 avatar" id="car2">
+            <img src="/img/svg/bike2.svg" class="animationO2 avatar" id="bike2">
+            <img src="/img/svg/factory.svg" class="animationO2 avatar" id="factory">
+        </div>
+    </div>
+
+    <div class="page2 page" id="pageB">
+        <video autoplay muted loop>
+            <source src="/img/svg/oceanBG.mp4" type="video/mp4" />
+        </video>
+        <div id="o2anim">
+            <img src="/img/svg/o2s.png">
+            <img src="/img/svg/o2t.png">
+        </div>
+
+        <div class="page2-animation">
+            <div class="oceanAvatars">
+                <img src="/img/phyto1.png" class="trigger" id="obj1">
+                <img src="/img/phyto1.png" class="trigger" id="obj2">
+            </div>
+            <div class="oceanAvatars">
+                <img src="/img/phyto1.png" class="trigger" id="obj1">
+                <img src="/img/phyto1.png" class="trigger" id="obj2">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" id="Contact">
+        <div class="footer-waves">
+            <div class="footer-wave" id="footer-wave1"></div>
+            <div class="footer-wave" id="footer-wave2"></div>
+            <div class="footer-wave" id="footer-wave3"></div>
+            <div class="footer-wave" id="footer-wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+        </ul>
+        <p>&copy; AyKan Visuals | All Rights Reserved</p>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+<script>
+    function showSimA(pageID) {
+        const simulationDivA = document.getElementById(pageID);
+        if (simulationDivA) {
+        console.log('New Display:', simulationDivA.style.display);
+
+        if (simulationDivA.style.display === 'none') {
+            simulationDivA.style.display = 'flex';
+        } else {
+            simulationDivA.style.display = 'none';
+        }
+        console.log('Current Display:', simulationDivA.style.display);
+        }
+    }
+    function showSimB(pageID) {
+        const simulationDivB = document.getElementById(pageID);
+        if (simulationDivB) {
+        console.log('Current Display:', simulationDivB.style.display);
+
+        if (simulationDivB.style.display === 'none') {
+            simulationDivB.style.display = 'block';
+        } else {
+            simulationDivB.style.display = 'none';
+        }
+        console.log('New Display:', simulationDivB.style.display);
+        }
+    }
+</script>
+
+</html>

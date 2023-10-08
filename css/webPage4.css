@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: whitesmoke;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+}
+* a {
+  text-decoration: none;
+  cursor: pointer;
+}
+* li {
+  list-style: none;
+}
+
+img {
+  max-height: 10rem;
+}
+
+body {
+  background: #333;
+  min-height: 100vh;
+}
+
+.body-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 100%;
+  font-size: 2rem;
+  word-spacing: 0.5rem;
+  letter-spacing: 1.3px;
+  color: springgreen;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 40%;
+}
+
+.nav {
+  margin-bottom: 1.25rem;
+}
+.nav ul {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.nav ul li a:hover {
+  color: springgreen;
+}
+
+.page1 {
+  position: relative;
+  height: 89vh;
+  max-width: 100vw;
+  display: none;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+.page1 .avatar {
+  height: 2.5rem;
+}
+.page1 .scene {
+  position: relative;
+  flex-basis: 50%;
+  height: 70%;
+  background-image: url(/img/svg/road.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+}
+.page1 #cow {
+  height: 4rem;
+  animation: move 30s linear infinite;
+  z-index: 3;
+}
+.page1 #sceneCity #car1 {
+  margin-bottom: 0.75rem;
+  height: 3rem;
+  z-index: 2;
+  animation: move 8s linear infinite;
+}
+.page1 #sceneCity #car2 {
+  height: 3rem;
+  z-index: 1;
+  margin-bottom: 2.1rem;
+  animation: car2 10s linear infinite;
+}
+.page1 #sceneCity #bike2 {
+  margin-bottom: 1.4rem;
+  height: 2.6rem;
+  animation: car2 15s linear infinite;
+}
+.page1 #sceneCity #factory {
+  position: absolute;
+  left: 10%;
+  bottom: 8%;
+  transform: rotateY(180deg);
+  height: 100%;
+  scale: 1.5;
+  z-index: 0;
+  margin-bottom: 4.5rem;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-47vw) rotateY(180deg);
+  }
+  50% {
+    transform: translateX(47vw) rotateY(180deg);
+  }
+  51% {
+    transform: translateX(47vw) rotateY(0deg);
+  }
+  100% {
+    transform: translateX(-47vw) rotateY(0deg);
+  }
+}
+@keyframes car2 {
+  0% {
+    transform: translateX(47vw) rotateY(180deg);
+  }
+  50% {
+    transform: translateX(-47vw) rotateY(180deg);
+  }
+  51% {
+    transform: translateX(-47vw) rotateY(0deg);
+  }
+  100% {
+    transform: translateX(47vw) rotateY(0deg);
+  }
+}
+
+#arrowAnim {
+  z-index: 5;
+  left: 25%;
+}
+#arrowAnim img {
+  position: absolute;
+  height: 13rem;
+  bottom: 0;
+  animation: CO2cloud 1.2s linear infinite;
+}
+#arrowAnim img:nth-child(1) {
+  left: 58%;
+}
+#arrowAnim img:nth-child(2) {
+  left: 78%;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(-7vw) rotateX(180deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-3.5vw) rotateX(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0vw) rotateX(180deg);
+  }
+}
+@keyframes CO2cloud {
+  0% {
+    opacity: 0;
+    transform: translateY(-7vw);
+  }
+  21% {
+    opacity: 1;
+    transform: translateY(-3.5vw);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(2.4vw);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(6vw);
+  }
+}
+.page-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.page-header .simulationBtn {
+  display: flex;
+  gap: 3rem;
+}
+
+.explorebtn {
+  z-index: 10;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 13rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-family: "JetBrains Mono", monospace;
+  color: #fff;
+  line-height: 1;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  overflow: hidden;
+  padding: auto 16px;
+  transition: box-shadow 0.15s, transform 0.15s;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.explorebtn:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+.explorebtn:hover {
+  text-decoration: none;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+  color: springgreen;
+}
+.explorebtn:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.page2 {
+  display: none;
+  height: 80vh;
+}
+.page2 video {
+  z-index: 1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.page2 #o2anim {
+  z-index: 5;
+  left: 25%;
+}
+.page2 #o2anim img {
+  position: absolute;
+  height: 13rem;
+  bottom: 0;
+  animation: O2cloud 2s linear infinite;
+}
+.page2 #o2anim img:nth-child(1) {
+  left: 8%;
+}
+.page2 #o2anim img:nth-child(2) {
+  left: 28%;
+}
+.page2 .oceanAvatars {
+  position: absolute;
+  top: 130%;
+}
+.page2 .oceanAvatars img {
+  scale: 1.5;
+  animation: obj1M1 4.7s linear infinite;
+}
+.page2 .oceanAvatars:nth-child(2) {
+  top: 160%;
+}
+
+@keyframes O2cloud {
+  0% {
+    opacity: 0;
+    transform: translateY(18vw);
+  }
+  51% {
+    opacity: 1;
+    transform: translateY(0vw);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-3vw);
+  }
+}
+@keyframes obj1M1 {
+  0% {
+    transform: translateX(52vw) rotateX(180deg);
+  }
+  35% {
+    transform: translateX(40vw);
+  }
+  71% {
+    transform: translateX(25vw);
+  }
+  100% {
+    transform: translateX(10vw) rotateX(-180deg);
+  }
+}
+.page1.page,
+.page2.page {
+  display: none; /* Add this line */
+  /* ... Your existing styles ... */
+}

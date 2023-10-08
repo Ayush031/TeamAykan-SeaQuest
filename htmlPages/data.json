@@ -1,0 +1,32 @@
+[  {
+  "name": "Indian Ocean",
+  "lat": "-27.26",
+  "lng": "79.60",
+  "children": []
+},
+  {
+    "name": "Arctic Ocean",
+    "lat": "79.13",
+    "lng": "-3.23",
+    "children": []
+  },
+  {
+    "name": "Pacific Ocean",
+    "lat": "26.95",
+    "lng": "-169.38",
+    "children": []
+  },
+  {
+    "name": "Atlantic Ocean",
+    "lat": " 15.326572",
+    "lng": "-76.157227",
+    "children": []
+  },
+
+  {
+    "name": "Southern Ocean",
+    "lat": "-68.03982",
+    "lng": "-26.63286",
+    "children": []
+  }
+]

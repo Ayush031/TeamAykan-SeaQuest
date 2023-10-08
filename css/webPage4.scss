@@ -1,0 +1,456 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: whitesmoke;
+    scroll-behavior: smooth;
+    transition: all 0.3s ease;
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+    li {
+        list-style: none;
+    }
+}
+
+img {
+    max-height: 10rem;
+}
+
+body {
+    background: #333;
+    min-height: 100vh;
+}
+.body-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 100%;
+    font-size: 2rem;
+    word-spacing: 0.5rem;
+    letter-spacing: 1.3px;
+    color: springgreen;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 40%;
+}
+
+// ***NAVBAR********
+
+.nav {
+    margin-bottom: 1.25rem;
+    ul {
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        align-items: center;
+        background-color: rgba($color: #000, $alpha: 0.45);
+        li {
+            a {
+                &:hover {
+                    color: springgreen;
+                }
+            }
+        }
+    }
+}
+
+// ********** PAGE-1 ************
+.page1 {
+    position: relative;
+    height: 89vh;
+    max-width: 100vw;
+    display: none;
+    justify-content: center;
+    margin-top: 1.25rem;
+
+    .avatar {
+        height: 2.5rem;
+    }
+    .scene {
+        position: relative;
+        flex-basis: 50%;
+        height: 70%;
+        background-image: url(/img/svg/road.jpg);
+        background-size: cover;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 0.5rem;
+    }
+    #cow {
+        height: 4rem;
+        animation: move 30s linear infinite;
+        z-index: 3;
+    }
+
+    #sceneCity {
+        #car1 {
+            margin-bottom: 0.75rem;
+            height: 3rem;
+            z-index: 2;
+            animation: move 8s linear infinite;
+        }
+        #car2 {
+            height: 3rem;
+            z-index: 1;
+            margin-bottom: 2.1rem;
+            animation: car2 10s linear infinite;
+        }
+        #bike2 {
+            margin-bottom: 1.4rem;
+            height: 2.6rem;
+            animation: car2 15s linear infinite;
+        }
+
+        #factory {
+            position: absolute;
+            left: 10%;
+            bottom: 8%;
+            transform: rotateY(180deg);
+            height: 100%;
+            scale: 1.5;
+            z-index: 0;
+            margin-bottom: 4.5rem;
+        }
+    }
+}
+@keyframes move {
+    0% {
+        transform: translateX(-47vw) rotateY(180deg);
+    }
+    50% {
+        transform: translateX(47vw) rotateY(180deg);
+    }
+    51% {
+        transform: translateX(47vw) rotateY(0deg);
+    }
+    100% {
+        transform: translateX(-47vw) rotateY(0deg);
+    }
+}
+@keyframes car2 {
+    0% {
+        transform: translateX(47vw) rotateY(180deg);
+    }
+    50% {
+        transform: translateX(-47vw) rotateY(180deg);
+    }
+    51% {
+        transform: translateX(-47vw) rotateY(0deg);
+    }
+    100% {
+        transform: translateX(47vw) rotateY(0deg);
+    }
+}
+
+// ***FOOTER********
+
+.footer {
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5vh;
+
+    .social-icon,
+    .menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+    }
+
+    .social-icon__link {
+        font-size: 2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+    }
+    .social-icon__link:hover {
+        transform: translateY(-10px);
+    }
+
+    .menu__link {
+        font-size: 1.2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        opacity: 0.75;
+        font-weight: 300;
+    }
+
+    .menu__link:hover {
+        opacity: 1;
+    }
+
+    .footer p {
+        color: #fff;
+        margin: 15px 0 10px 0;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .footer-wave {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url("https://i.ibb.co/wQZVxxk/wave.png");
+        background-size: 1000px 100px;
+    }
+
+    #footer-wave1 {
+        z-index: 7;
+        opacity: 1;
+        bottom: 0;
+        animation: animateWaves 4s linear infinite;
+    }
+
+    #footer-wave2 {
+        z-index: 6;
+        opacity: 0.5;
+        bottom: 10px;
+        animation: animate 4s linear infinite !important;
+    }
+
+    #footer-wave3 {
+        z-index: 7;
+        opacity: 0.2;
+        bottom: 15px;
+        animation: animateWaves 3s linear infinite;
+    }
+
+    #footer-wave4 {
+        z-index: 6;
+        opacity: 0.7;
+        bottom: 20px;
+        animation: animate 3s linear infinite;
+    }
+}
+@keyframes animateWaves {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-positon-x: 0px;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: -1000px;
+    }
+    100% {
+        background-positon-x: 0px;
+    }
+}
+
+// **********  Arrow CSS **************
+#arrowAnim {
+    z-index: 5;
+    left: 25%;
+    img {
+        position: absolute;
+        height: 13rem;
+        bottom: 0;
+        animation: CO2cloud 1.2s linear infinite;
+        &:nth-child(1) {
+            left: 58%;
+        }
+        &:nth-child(2) {
+            left: 78%;
+        }
+    }
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(-7vw) rotateX(180deg);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-3.5vw) rotateX(180deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(0vw) rotateX(180deg);
+    }
+}
+@keyframes CO2cloud {
+    0% {
+        opacity: 0;
+        transform: translateY(-7vw);
+    }
+    21% {
+        opacity: 1;
+        transform: translateY(-3.5vw);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(2.4vw);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(6vw);
+    }
+}
+
+// ---------CTA BUTTON-----------
+.page-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .simulationBtn {
+        display: flex;
+        gap: 3rem;
+    }
+}
+.explorebtn {
+    z-index: 10;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 13rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-family: "JetBrains Mono", monospace;
+    color: #fff;
+    line-height: 1;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow:
+        rgba(45, 35, 66, 0.4) 0 2px 4px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+        rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+    overflow: hidden;
+    padding: auto 16px;
+    transition:
+        box-shadow 0.15s,
+        transform 0.15s;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    user-select: none;
+    -webkit-user-select: none;
+
+    &:focus {
+        box-shadow:
+            #3c4fe0 0 0 0 1.5px inset,
+            rgba(45, 35, 66, 0.4) 0 2px 4px,
+            rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+            #3c4fe0 0 -3px 0 inset;
+    }
+    &:hover {
+        text-decoration: none;
+        box-shadow:
+            rgba(45, 35, 66, 0.4) 0 4px 8px,
+            rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+            #3c4fe0 0 -3px 0 inset;
+        transform: translateY(-2px);
+        color: springgreen;
+    }
+    &:active {
+        box-shadow: #3c4fe0 0 3px 7px inset;
+        transform: translateY(2px);
+    }
+}
+
+// ******** PAGE2-OCEAN PART ********
+
+.page2 {
+    display: none;
+    height: 80vh;
+    video {
+        z-index: 1;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    #o2anim {
+        z-index: 5;
+        left: 25%;
+        img {
+            position: absolute;
+            height: 13rem;
+            bottom: 0;
+            animation: O2cloud 2s linear infinite;
+
+            &:nth-child(1) {
+                left: 8%;
+            }
+            &:nth-child(2) {
+                left: 28%;
+            }
+        }
+    }
+
+    .oceanAvatars {
+        position: absolute;
+        top: 130%;
+        img {
+            scale: 1.5;
+            animation: obj1M1 4.7s linear infinite;
+        }
+        &:nth-child(2) {
+            top: 160%;
+        }
+    }
+}
+
+@keyframes O2cloud {
+    0% {
+        opacity: 0;
+        transform: translateY(18vw);
+    }
+    51% {
+        opacity: 1;
+        transform: translateY(0vw);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-3vw);
+    }
+}
+
+@keyframes obj1M1 {
+    0% {
+        transform: translateX(52vw) rotateX(180deg);
+    }
+    35% {
+        transform: translateX(40vw);
+    }
+    71% {
+        transform: translateX(25vw);
+    }
+    100% {
+        transform: translateX(10vw) rotateX(-180deg);
+    }
+}
+
+
+.page1.page,
+.page2.page {
+    display: none; /* Add this line */
+    /* ... Your existing styles ... */
+}

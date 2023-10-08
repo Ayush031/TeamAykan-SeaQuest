@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>scrolling timeline</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+
+<body>
+    <div class="se-pre-con"></div>
+
+    <div class="main-wrapperBox">
+        <div id="starLight-container">
+            <iframe src="/htmlPages/star.html" id="starLight-Bg" frameborder="0"></iframe>
+        </div>
+        <nav>
+            <ul class="ag-timeline-nav">
+                <li class="ag-timeline-nav--item"><a href="#oceanBeauty">Beauty of Ocean</a></li>
+                <li class="ag-timeline-nav--item"><a href="#foodSupply">Food Supply</a></li>
+                <li class="ag-timeline-nav--item"><a href="#O2prod">OXYGEN Production</a></li>
+                <li class="ag-timeline-nav--item"><a href="#CO2red">CO2 Reduction</a></li>
+            </ul>
+        </nav>
+        <div class="body-header">
+            <div class="body-header-svg">
+                <img src="/img/svg/fish1.svg" class="svg" id="svgFish1" alt="">
+                <img src="/img/svg/fish2.svg " class="svg" id="svgFish2" alt="">
+                <img src="/img/svg/fish1.svg" class="svg" id="svgFish3" alt="">
+                <img src="/img/svg/fish2.svg " class="svg" id="svgFish4" alt="">
+                <img src="/img/svg/fish1.svg " class="svg" id="svgFish5" alt="">
+            </div>
+            <div class="ag-timeline-prevblock">
+                <div class="ag-timeline-prevblock-1"><span class="lime">Destination </span>Arrived</div>
+                <div class="ag-timeline-prevblock-2">You are at <span class="lime">SeaQuest</span></div>
+                <div class="ag-timeline-prevblock-btn">
+                    <a href="#tagScroll" onclick="svgAnimate()" class="explorebtn">`SPECTATE`</a>
+                </div>
+            </div>
+        </div>
+        <div class="page2">
+            <div class="ag-timeline-block" id="tagScroll">
+                <div class="ag-timeline_title-box">
+                    <div class="ag-timeline_tagline">Lets <span class="lime">Dive </span>inside <span class="lime">Ocean
+                        </span></div>
+                    <div class="ag-timeline_tagline ag-timeline_tagline2">Hidden Secret</div>
+                    <!-- <div class="ag-timeline_title"> Hidden Secret</div> -->
+                </div>
+            </div>
+            <section class="ag-section">
+                <div class="ag-format-container">
+                    <div class="js-timeline ag-timeline">
+                        <div class="js-timeline_line ag-timeline_line">
+                            <div class="js-timeline_line-progress ag-timeline_line-progress"></div>
+                        </div>
+                        <div class="ag-timeline_list">
+                            <div class="js-timeline_item ag-timeline_item" id="O2prod">
+                                <div class="ag-timeline-card_box">
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">1</div>
+                                    </div>
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">Oxygen Production</div>
+                                    </div>
+                                    <div class="ag-timeline-card_desc">
+                                        Oceans contibute to 50% of the oxygen on Earth.
+
+                                    </div>
+                                    <div class="ag-timeline-card_btn">
+                                        <a href="/htmlPages/webPage4.html" class="explorebtn">HOW!!</a>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_item">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img src="/img/earth.png" class="ag-timeline-card_img" />
+                                        </div>
+                                        <div class="ag-timeline-card_info">
+                                            <div class="ag-timeline-card_title"> </div>
+                                        </div>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+                            <div class="js-timeline_item ag-timeline_item">
+                                <div class="ag-timeline-card_box">
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">Food Supply</div>
+                                    </div>
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">2</div>
+                                    </div>
+                                    <div class="ag-timeline-card_desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+                                        itaque!
+                                    </div>
+                                    <div class="ag-timeline-card_btn">
+                                        <a href="#" class="explorebtn">HOW!!</a>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_item" id="foodSupply">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img class="ag-timeline-card_img"
+                                                src="https://images.pexels.com/photos/3319324/pexels-photo-3319324.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                                class="ag-timeline-card_img" />
+                                        </div>
+                                        <div class="ag-timeline-card_info">
+                                            <div class="ag-timeline-card_title">Food Supply</div>
+                                        </div>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+                            <div class="js-timeline_item ag-timeline_item" id="CO2reduce">
+                                <div class="ag-timeline-card_box">
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">3</div>
+                                    </div>
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">CO2 Reduction</div>
+                                    </div>
+                                    <div class="ag-timeline-card_desc">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, magni!
+                                    </div>
+                                    <div class="ag-timeline-card_btn">
+                                        <a href="/htmlPages/webPage4.html" class="explorebtn">HOW!!</a>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_item">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img src="https://images.pexels.com/photos/4668363/pexels-photo-4668363.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                                class="ag-timeline-card_img" />
+                                        </div>
+                                        <div class="ag-timeline-card_info">
+                                            <div class="ag-timeline-card_title">Reduce CO2</div>
+                                        </div>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+                            <div class="js-timeline_item ag-timeline_item" id="oceanBeauty">
+                                <div class="ag-timeline-card_box">
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">Oceans Garden</div>
+                                    </div>
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">4</div>
+                                    </div>
+                                    <div class="ag-timeline-card_desc">
+                                        Ocean has a Beauty in itself. Let's Visit the Aqua Marinary of Ocean and explore
+                                        what's inside
+                                    </div>
+                                    <div class="ag-timeline-card_btn">
+                                        <a href="/index.html" class="explorebtn">Visit!!</a>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_item">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img src="https://previews.123rf.com/images/f8studio/f8studio1704/f8studio170400485/75408571-sea-under-water-nature-with-reaf-coral-and-fishes-sea-flora-and-fauna-sea-nature.jpg" class="ag-timeline-card_img">
+                                        </div>
+                                        <div class="ag-timeline-card_info">
+                                            <div class="ag-timeline-card_title">Ocean's Beauty</div>
+                                        </div>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="page3">
+            <div class="page3-heading">Now it's Time to Visualize The Oceans</div>
+            <div class="globeVisit">
+                <a href="/htmlPages/webPage2.html" class="explorebtn">Visit</a>
+            </div>
+        </section>
+    </div>
+
+
+    <footer class="footer" id="Contact">
+        <div class="footer-waves">
+            <div class="footer-wave" id="footer-wave1"></div>
+            <div class="footer-wave" id="footer-wave2"></div>
+            <div class="footer-wave" id="footer-wave3"></div>
+            <div class="footer-wave" id="footer-wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+        </ul>
+        <p>&copy; AyKan Visuals | All Rights Reserved</p>
+    </footer>
+</body>
+<script>
+    (function ($) {
+        $(function () {
+            $(window).on('scroll', function () {
+                fnOnScroll();
+            });
+            $(window).on('resize', function () {
+                fnOnResize();
+            });
+            var agTimeline = $('.js-timeline'),
+                agTimelineLine = $('.js-timeline_line'),
+                agTimelineLineProgress = $('.js-timeline_line-progress'),
+                agTimelinePoint = $('.js-timeline-card_point-box'),
+                agTimelineItem = $('.js-timeline_item'),
+                agOuterHeight = $(window).outerHeight(),
+                agHeight = $(window).height(),
+                f = -1,
+                agFlag = false;
+            function fnOnScroll() {
+                agPosY = $(window).scrollTop();
+
+                fnUpdateFrame();
+            }
+            function fnOnResize() {
+                agPosY = $(window).scrollTop();
+                agHeight = $(window).height();
+
+                fnUpdateFrame();
+            }
+            function fnUpdateWindow() {
+                agFlag = false;
+
+                agTimelineLine.css({
+                    top: agTimelineItem.first().find(agTimelinePoint).offset().top - agTimelineItem.first().offset().top,
+                    bottom: agTimeline.offset().top + agTimeline.outerHeight() - agTimelineItem.last().find(agTimelinePoint).offset().top
+                });
+
+                f !== agPosY && (f = agPosY, agHeight, fnUpdateProgress());
+            }
+            function fnUpdateProgress() {
+                var agTop = agTimelineItem.last().find(agTimelinePoint).offset().top;
+
+                i = agTop + agPosY - $(window).scrollTop();
+                a = agTimelineLineProgress.offset().top + agPosY - $(window).scrollTop();
+                n = agPosY - a + agOuterHeight / 2;
+                i <= agPosY + agOuterHeight / 2 && (n = i - a);
+                agTimelineLineProgress.css({ height: n + "px" });
+                agTimelineItem.each(function () {
+                    var agTop = $(this).find(agTimelinePoint).offset().top;
+
+                    (agTop + agPosY - $(window).scrollTop()) < agPosY + .5 * agOuterHeight ? $(this).addClass('js-ag-active') : $(this).removeClass('js-ag-active');
+                })
+            }
+            function fnUpdateFrame() {
+                agFlag || requestAnimationFrame(fnUpdateWindow);
+                agFlag = true;
+            }
+        });
+    })(jQuery);
+
+    // ************ Words Color Splitter ******************
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     const statementDiv = document.getElementById('statement');
+    //     const statementText = statementDiv.innerText;
+
+    //     // Split the statement into words
+    //     const words = statementText.split(' ');
+
+    //     // Create an array to store unique words
+    //     const uniqueWords = [];
+
+    //     // Iterate through the words
+    //     words.forEach(word => {
+    //         if (!uniqueWords.includes(word.toLowerCase())) {
+    //             uniqueWords.push(word.toLowerCase());
+    //         }
+    //     });
+
+    //     // Apply different classes to unique words
+    //     uniqueWords.forEach(uniqueWord => {
+    //         const wordElements = statementDiv.querySelectorAll(`:contains('${uniqueWord}')`);
+
+    //         wordElements.forEach(element => {
+    //             if (element.textContent.toLowerCase() === uniqueWord) {
+    //                 if (uniqueWord === 'dive') {
+    //                     element.classList.add('red');
+    //                 } else if (uniqueWord === 'begins') {
+    //                     element.classList.add('blue');
+    //                 }
+    //             }
+    //         });
+    //     });
+    // });
+
+    $(window).on("load", function () {
+        // Animate loader off screen
+        $(".se-pre-con").fadeOut(500);;
+    });
+
+
+</script>
+
+</html>
