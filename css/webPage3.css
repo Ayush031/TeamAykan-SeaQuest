@@ -1,31 +1,31 @@
 @font-face {
   font-family: aperL;
-  src: url(/fonts/aperL.ttf);
+  src: url(../fonts/aperL.ttf);
 }
 
 @font-face {
   font-family: aperM;
-  src: url(/fonts/aperM.ttf);
+  src: url(../fonts/aperM.ttf);
 }
 
 @font-face {
   font-family: aperB;
-  src: url(/fonts/aperB.ttf);
+  src: url(../fonts/aperB.ttf);
 }
 
 @font-face {
   font-family: aperR;
-  src: url(/fonts/aperR.ttf);
+  src: url(../fonts/aperR.ttf);
 }
 
 @font-face {
   font-family: kfc1;
-  src: url(/fonts/kfc1.ttf);
+  src: url(../fonts/kfc1.ttf);
 }
 
 @font-face {
   font-family: kfc2;
-  src: url(/fonts/kfc2.ttf);
+  src: url(../fonts/kfc2.ttf);
 }
 
 * {
