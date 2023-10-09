@@ -247,7 +247,7 @@ function addGlobe() {
 	texture.needsUpdate = true;
 	var globe = new THREE.Group();
 	var loader = new THREE.TextureLoader();
-	loader.load('/img/no_clouds.jpg', function (texture) {
+	loader.load('../img/no_clouds.jpg', function (texture) {
 		// loader.load('img/earth.png', function (texture) {
 
 		// Create the sphere
